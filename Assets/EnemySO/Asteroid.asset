@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddda9bb63c0a3343bb8cf918051a950, type: 3}
+  m_Name: Asteroid
+  m_EditorClassIdentifier: 
+  repetitions: 6
+  timeBetweenSpawn: 5.1
+  spawnCount: 5
+  preloadAmount: 10
+  prefab: {fileID: 8735249316025653544, guid: 8885c9301cd39cf4b9e3931ba4918ec2, type: 3}
+  orden: 3
