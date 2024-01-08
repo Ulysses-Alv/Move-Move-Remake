@@ -25,9 +25,9 @@ namespace FactoryPattern
             idThree = objectFactory.GetObjectExample("IdThree").gameObject;
 
             //Factoy Method + Object Pooling.
-            ObjectPooling.PreLoad(idOne, 2);
-            ObjectPooling.PreLoad(idTwo, 2);
-            ObjectPooling.PreLoad(idThree, 2);
+            ObjectPooling.TryPreLoad(idOne, 2);
+            ObjectPooling.TryPreLoad(idTwo, 2);
+            ObjectPooling.TryPreLoad(idThree, 2);
         }
 
         void Update()

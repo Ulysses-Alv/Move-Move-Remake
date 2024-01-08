@@ -15,12 +15,16 @@ public class GameDifficultyManager : MonoBehaviour
     {
         float speed = spawneableObjSpeedCurve.Evaluate(GameTimerManager.instance.time) * 10;
         speed = Random.Range(speed - 50, speed + 50);
-        
+
         return speed;
     }
 
     public float GetPowerUpSpeed()
     {
         return spawneableObjSpeedCurve.Evaluate(GameTimerManager.instance.time) * 10;
+    }
+    public float GetRobotSpeed()
+    {
+        return spawneableObjSpeedCurve.Evaluate(GameTimerManager.instance.time) * 15;
     }
 }

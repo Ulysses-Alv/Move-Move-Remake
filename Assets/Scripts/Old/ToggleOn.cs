@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ToggleOn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // StartGame is called before the first frame update
     void Start()
     {
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ToggleOn2 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // StartGame is called before the first frame update
     void Start()
     {
         if (PlayerPrefs.GetFloat("PropulsionActivada") == 1f)

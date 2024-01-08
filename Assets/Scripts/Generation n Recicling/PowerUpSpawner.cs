@@ -15,8 +15,8 @@ public class PowerUpSpawner : MonoBehaviour
     }
     private void PreloadSpawneableObjects()
     {
-        ObjectPooling.PreLoad(Shield, 1);
-        ObjectPooling.PreLoad(ExtraLife, 1);
+        ObjectPooling.TryPreLoad(Shield, 1);
+        ObjectPooling.TryPreLoad(ExtraLife, 1);
     }
 
     private void SpawnPowerUp(int secondsOfSpawn)

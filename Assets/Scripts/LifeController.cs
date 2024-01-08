@@ -10,6 +10,10 @@ public class LifeController : MonoBehaviour
     {
         instance = this;
         health = new ReactiveProperty<int>(3);
+        health.Subscribe((int hp) =>
+        {
+            if(hp <= 0) GameStateManager.EndGame();
+        });
     }
 
     public void ReduceLife()

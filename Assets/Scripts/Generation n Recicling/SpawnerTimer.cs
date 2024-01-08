@@ -19,7 +19,7 @@ public class SpawnerTimer : MonoBehaviour
     }
     private void Start()
     {
-        GameStateManager.instance.ActualState.Subscribe(PauseTimer);
+        GameStateManager.ActualState.Subscribe(PauseTimer);
     }
 
     private IEnumerator StartTimer()
@@ -32,7 +32,6 @@ public class SpawnerTimer : MonoBehaviour
     private void PauseTimer(GameStates gameState)
     {
         if (gameState != GameStates.Lose) return;
-        Debug.LogWarning("PERDISTE");
         timerAction = null;
     }
 

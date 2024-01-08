@@ -24,7 +24,7 @@ public class Robot_Controller : MonoBehaviour
 
     Vector3 target;
 
-    // Start is called before the first frame update
+    // StartGame is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

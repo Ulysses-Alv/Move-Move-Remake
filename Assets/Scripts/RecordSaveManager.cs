@@ -1,19 +1,13 @@
 ﻿using UnityEngine;
 
-public class RecordSaveManager : MonoBehaviour
+public static class RecordSaveManager
 {
-    public static RecordSaveManager Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-    public void SaveRecord(float record)
+    public static void SaveRecord(float record)
     {
         PlayerPrefs.SetFloat("Record", record);
     }
 
-    public float LoadRecord()
+    public static float LoadRecord()
     {
         return PlayerPrefs.GetFloat("Record");
     }

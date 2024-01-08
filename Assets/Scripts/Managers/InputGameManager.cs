@@ -17,8 +17,9 @@ public class InputGameManager : MonoBehaviour
 
     private void Restart(InputAction.CallbackContext obj)
     {
-        if (GameStateManager.instance.ActualState.Value != GameStates.Lose) return;
+        if (!StatesBool.IsLose()) return;
 
+        GameStateManager.StartGame();
         SceneManager.LoadScene("Game");
     }
 
@@ -28,7 +29,7 @@ public class InputGameManager : MonoBehaviour
     }
     private void Update()
     {
-        if (GameStateManager.instance.ActualState.Value == GameStates.Lose) return;
+        if (StatesBool.IsLose()) return;
 
         Vector2 input = playerInput.Game.Movement.ReadValue<Vector2>();
 

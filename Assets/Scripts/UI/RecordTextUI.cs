@@ -9,11 +9,11 @@ public class RecordTextUI : MonoBehaviour
     {
         recordText = GetComponent<TextMeshProUGUI>();
 
-        int currentValue = (int)RecordSaveManager.Instance.LoadRecord();
+        int currentValue = (int)RecordSaveManager.LoadRecord();
         int score = (int)GameTimerManager.instance.time;
 
         recordText.enabled = score > currentValue;
 
-        if (score > currentValue) RecordSaveManager.Instance.SaveRecord(score);
+        if (score > currentValue) RecordSaveManager.SaveRecord(score);
     }
 }

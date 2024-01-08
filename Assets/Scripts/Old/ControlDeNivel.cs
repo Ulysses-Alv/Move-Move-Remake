@@ -168,7 +168,7 @@ public class ControlDeNivel : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void StartGame()
     {
         
         PlayerPrefs.SetFloat("PropulsionActivada", PlayerPrefs.GetFloat("PropulsionActivada", 0f));

@@ -8,7 +8,7 @@ public class EndGameManager : MonoBehaviour
 
     private void Start()
     {
-        GameStateManager.instance.ActualState.Subscribe(EndGame);
+        GameStateManager.ActualState.Subscribe(EndGame);
     }
     private void EndGame(GameStates gameState)
     {

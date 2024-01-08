@@ -6,7 +6,7 @@ public class Background_Movement : MonoBehaviour
 {
     private Rigidbody2D RB;
     public float velocidad = 0f;
-    // Start is called before the first frame update
+    // StartGame is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();

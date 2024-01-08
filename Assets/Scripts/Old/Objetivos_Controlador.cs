@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objetivos_Controlador : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // StartGame is called before the first frame update
     void Start()
     {
         if(GameObject.Find("Nivel 1")) {

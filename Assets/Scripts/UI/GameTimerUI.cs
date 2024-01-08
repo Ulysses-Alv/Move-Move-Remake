@@ -15,7 +15,7 @@ public class GameTimerUI : MonoBehaviour
 
     private void Start()
     {
-        GameStateManager.instance.ActualState.Subscribe(PauseTimer);
+        GameStateManager.ActualState.Subscribe(PauseTimer);
         timer = UpdateTextUI;
     }
 

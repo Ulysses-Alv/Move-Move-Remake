@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Unity.VisualScripting.FullSerializer;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 public static class ObjectPooling
 {
@@ -7,7 +7,18 @@ public static class ObjectPooling
     static Dictionary<int, Queue<GameObject>> pool = new Dictionary<int, Queue<GameObject>>();
     static Dictionary<int, GameObject> parentsGOs = new Dictionary<int, GameObject>();
 
-    public static void PreLoad(GameObject objectToPool, int amount)
+    public static void TryPreLoad(GameObject objectToPool, int amount)
+    {
+        try
+        {
+            PreLoad(objectToPool, amount);
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning(e);
+        }
+    }
+    private static void PreLoad(GameObject objectToPool, int amount)
     {
         int id = objectToPool.GetInstanceID();
 
@@ -29,7 +40,7 @@ public static class ObjectPooling
     {
         int id = objectToPool.GetInstanceID();
 
-        GameObject go = Object.Instantiate(objectToPool);
+        GameObject go = UnityEngine.Object.Instantiate(objectToPool);
         go.transform.SetParent(GetParent(id).transform);
         go.SetActive(false);
 

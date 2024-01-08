@@ -12,7 +12,7 @@ public class BackGroundMovement : MonoBehaviour
 
     private void Start()
     {
-        GameStateManager.instance.ActualState.Subscribe(SetBackgroundMovement);
+        GameStateManager.ActualState.Subscribe(SetBackgroundMovement);
         backgroundAction += BackgroundMovement;
 
         yVelocity *= 10;

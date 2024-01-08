@@ -21,7 +21,7 @@ public class GameTimerManager : MonoBehaviour
     }
     private void Start()
     {
-        GameStateManager.instance.ActualState.Subscribe(PauseTimer);
+        GameStateManager.ActualState.Subscribe(PauseTimer);
         timer = UpdateTimer;
     }
 
@@ -42,7 +42,6 @@ public class GameTimerManager : MonoBehaviour
     {
         if (gameState != GameStates.Lose) return;
 
-        Debug.LogWarning("PERDISTE");
         timer = null;
     }
 }

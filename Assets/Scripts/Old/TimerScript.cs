@@ -17,7 +17,7 @@ public class TimerScript : MonoBehaviour
     private float escalaDeTiempoInicial; //escalaATiempoAlPausar, 
     //private bool estaPausado = false;
 
-    // Start is called before the first frame update
+    // StartGame is called before the first frame update
     void Start()
     {
         escalaDeTiempoInicial = EscalaDelTiempo;

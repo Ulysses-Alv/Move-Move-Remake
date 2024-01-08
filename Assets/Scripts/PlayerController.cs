@@ -40,8 +40,3 @@ public class PlayerController : MonoBehaviour
         EnemyRecicler.instance.RecicleGO(collision.gameObject);
     }
 }
- 
-public enum GameStates
-{
-    Starting, Playing, Lose, Paused
-}

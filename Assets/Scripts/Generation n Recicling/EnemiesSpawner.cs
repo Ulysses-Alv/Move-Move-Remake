@@ -12,7 +12,7 @@ public class EnemiesSpawner : MonoBehaviour, ISpawnObject
     {
         logic = GetComponent<EnemySpawnLogic>();
 
-        ObjectPooling.PreLoad(spawnConfig.prefab, spawnConfig.preloadAmount);
+        ObjectPooling.TryPreLoad(spawnConfig.prefab, spawnConfig.preloadAmount);
     }
     public void SpawnObjects()
     {
