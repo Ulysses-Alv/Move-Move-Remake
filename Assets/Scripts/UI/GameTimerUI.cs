@@ -45,7 +45,6 @@ public class GameTimerUI : MonoBehaviour
     {
         if (gameState != GameStates.Lose) return;
 
-        Debug.LogWarning("PERDISTE");
         timer = null;
     }
 }

@@ -10,6 +10,6 @@ public class ScoreTextUI : MonoBehaviour
         scoreText = GetComponent<TextMeshProUGUI>();
 
         int timeText = (int)GameTimerManager.instance.time;
-        scoreText.text = string.Format("Score: {0}", timeText);
+        scoreText.text = $"Score: {timeText}";
     }
 }
